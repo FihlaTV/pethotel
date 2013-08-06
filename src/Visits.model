@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="OwnerID" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="3" typeName="DECIMAL"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
+  <entity Title="Pets Query" entityHeight="200" entityIconified="false" entityId="137571190553664" entityLocationX="484" entityLocationY="59" entityWidth="150" queryId="Pets_Query" tableAlias="q" tableName="" tableSchemaName=""/>
+  <entity Title="VISIT" entityHeight="200" entityIconified="false" entityId="137570534062752" entityLocationX="216" entityLocationY="66" entityWidth="150" tableAlias="t1" tableName="VISIT" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="OwnerID" rightEntityId="137571190553664" rightEntityParameterName="OwnerID"/>
+  <relation leftEntityFieldName="PET" leftEntityId="137570534062752" rightEntityFieldName="PETS_ID" rightEntityId="137571190553664"/>
+</datamodel>

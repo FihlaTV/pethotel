@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="451px" prefWidth="728px">
+  <widget floatable="false" name="toolBar" opaque="false" parent="Form" prefHeight="36px" prefWidth="732px" rollover="true" type="ToolbarDesignInfo">
+    <constraints height="36px" left="0px" top="0px" type="MarginConstraintsDesignInfo" width="732px"/>
+  </widget>
+  <widget actionPerformed="btnAddActionPerformed" focusable="false" horizontalTextPosition="0" name="btnAdd" parent="toolBar" prefHeight="23px" prefWidth="32px" text="Add" type="ButtonDesignInfo" verticalTextPosition="3"/>
+  <widget actionPerformed="btnDeleteActionPerformed" focusable="false" horizontalTextPosition="0" name="btnDelete" parent="toolBar" prefHeight="23px" prefWidth="49px" text="Delete" type="ButtonDesignInfo" verticalTextPosition="3"/>
+  <widget actionPerformed="btnEditActionPerformed" focusable="false" horizontalTextPosition="0" name="btnEdit" parent="toolBar" prefHeight="23px" prefWidth="32px" text="Edit" type="ButtonDesignInfo" verticalTextPosition="3"/>
+  <widget deletable="false" editable="false" insertable="false" mouseClicked="grdOwnersMouseClicked" name="grdOwners" parent="Form" prefHeight="420px" prefWidth="732px" type="DbGridDesignInfo">
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="137568719089436" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
+    <column name="fullName" title="Name" width="150">
+      <datamodelElement entityId="137568719089436" fieldName="fullName"/>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="DejaVu Sans"/>
+      </headerStyle>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+    </column>
+    <column name="aDDRESS" title="Address" width="150">
+      <datamodelElement entityId="137568719089436" fieldName="ADDRESS"/>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="DejaVu Sans"/>
+      </headerStyle>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+    </column>
+    <column name="cITY" title="City" width="150">
+      <datamodelElement entityId="137568719089436" fieldName="CITY"/>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="DejaVu Sans"/>
+      </headerStyle>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+    </column>
+    <column name="tELEPHONE" title="Telephone" width="150">
+      <datamodelElement entityId="137568719089436" fieldName="TELEPHONE"/>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="DejaVu Sans"/>
+      </headerStyle>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+    </column>
+    <constraints height="420px" left="0px" right="-4px" top="36px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <layout type="MarginLayoutDesignInfo"/>
+</layout>
