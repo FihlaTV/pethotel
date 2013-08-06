@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="451px" prefWidth="728px">
+<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="451px" prefWidth="728px" title="Owners list">
   <widget floatable="false" name="toolBar" opaque="false" parent="Form" prefHeight="36px" prefWidth="732px" rollover="true" type="ToolbarDesignInfo">
     <constraints height="36px" left="0px" top="0px" type="MarginConstraintsDesignInfo" width="732px"/>
   </widget>
@@ -70,7 +70,7 @@
       </headerStyle>
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
-    <constraints height="420px" left="0px" right="-4px" top="36px" type="MarginConstraintsDesignInfo"/>
+    <constraints bottom="-5px" left="0px" right="-4px" top="36px" type="MarginConstraintsDesignInfo"/>
   </widget>
   <layout type="MarginLayoutDesignInfo"/>
 </layout>
