@@ -1,5 +1,5 @@
 /**
- *
+ * Gets all types for pets.
  * @public 
  * @author vv
  * @name PetTypes

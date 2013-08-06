@@ -1,9 +1,13 @@
 /**
- * 
+ * Allows to edit the owner, add and edit his/her pets and pets visit to the hotel. 
  * @author vv
  * @name OwnerForm
  */
 
+/**
+ * Save button's click event handler.
+ * @param evt Event object
+ */
 function btnSaveActionPerformed(evt) {//GEN-FIRST:event_btnSaveActionPerformed
     var message = validate();
     if (!message) {
@@ -15,37 +19,65 @@ function btnSaveActionPerformed(evt) {//GEN-FIRST:event_btnSaveActionPerformed
     }
 }//GEN-LAST:event_btnSaveActionPerformed
 
+/**
+ * Cancel button's click event handler.
+ * @param {type} evt Event object
+ */
 function btnCancelActionPerformed(evt) {//GEN-FIRST:event_btnCancelActionPerformed
     close();
 }//GEN-LAST:event_btnCancelActionPerformed
 
+/**
+ * Data model's OnRequired event handler.
+ * @param evt Event object
+ */
 function owner_OnRequeried(evt) {//GEN-FIRST:event_owner_OnRequeried
     if (!OwnerId) {
         owner.insert();
     }
 }//GEN-LAST:event_owner_OnRequeried
 
+/**
+ * Add pet button's click event handler.
+ * @param {type} evt Event object
+ */
 function btnAddPetActionPerformed(evt) {//GEN-FIRST:event_btnAddPetActionPerformed
     pets.insert();
     pets.OWNER = owner.OWNERS_ID;
 }//GEN-LAST:event_btnAddPetActionPerformed
 
+/**
+ * Delete pet button's click event handler. Deletes selected pet.
+ * @param {type} evt Event object
+ */
 function btnDeletePetActionPerformed(evt) {//GEN-FIRST:event_btnDeletePetActionPerformed
     if (confirm('Delete pet?', title)) {
         pets.deleteRow();
     }
 }//GEN-LAST:event_btnDeletePetActionPerformed
 
+/**
+ * Add visit button's click event handler.
+ * @param {type} evt Event object
+ */
 function btnAddVisitActionPerformed(evt) {//GEN-FIRST:event_btnAddVisitActionPerformed
     visits.insert();
 }//GEN-LAST:event_btnAddVisitActionPerformed
 
+/**
+ * Delete visit button's click event handler.
+ * @param {type} evt Event object
+ */
 function btnDeleteVisitActionPerformed(evt) {//GEN-FIRST:event_btnDeleteVisitActionPerformed
     if (confirm('Delete visit?', title)) {
         visits.deleteRow();
     }
 }//GEN-LAST:event_btnDeleteVisitActionPerformed
 
+/**
+ * Pet's entity cursor movement event handler.
+ * @param {type} evt Event object
+ */
 function petsWillScroll(evt) {//GEN-FIRST:event_petsWillScroll
     Logger.info('Pets scroll event.');
     var message = validateVisits();
@@ -56,6 +88,10 @@ function petsWillScroll(evt) {//GEN-FIRST:event_petsWillScroll
     return true;
 }//GEN-LAST:event_petsWillScroll
 
+/**
+ * Validates the view.
+ * @return Validation error message or empty String if form is valid
+ */
 function validate() {
     var message = validateOwner();
     message += validatePets();
@@ -63,26 +99,34 @@ function validate() {
     return message;
 }
 
+/**
+ * Validates owner's properties.
+ * @return Validation error message or empty String if form is valid
+ */
 function validateOwner() {
     var message = "";
     if (!owner.FIRSTNAME) {
-        message += "First name is required.\n"
+        message += "First name is required.\n";
     }
     if (!owner.LASTNAME) {
-        message += "Last name is required.\n"
+        message += "Last name is required.\n";
     }
     if (!owner.ADDRESS) {
-        message += "Address is required.\n"
+        message += "Address is required.\n";
     }
     if (!owner.CITY) {
-        message += "City is required.\n"
+        message += "City is required.\n";
     }
     if (!owner.TELEPHONE) {
-        message += "Phone number is required.\n"
+        message += "Phone number is required.\n";
     }
     return message;
 }
 
+/**
+ * Validates pets entity.
+ * @return Validation error message or empty String if form is valid
+ */
 function validatePets() {
     var message = "";
     pets.forEach(function(pet) {
@@ -99,6 +143,10 @@ function validatePets() {
     return message;
 }
 
+/**
+ * Validates visits entity.
+ * @return Validation error message or empty String if form is valid
+ */
 function validateVisits() {
     var message = "";
     visits.forEach(function(visit) {

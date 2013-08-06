@@ -1,5 +1,5 @@
 /**
- *
+ * Gets all owners.
  * @author vv
  * @public
  * @name Owners_Query

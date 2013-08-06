@@ -1,5 +1,5 @@
 /**
- *
+ * Gets the pets for ccncrete owner.
  * @public 
  * @author vv
  * @name Pets_Query

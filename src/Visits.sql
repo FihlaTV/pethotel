@@ -1,4 +1,5 @@
 /**
+ * Gets all visits for concrete owner.
  * @public
  * @author vv
  * @name Visits

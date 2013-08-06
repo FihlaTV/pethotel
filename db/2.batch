@@ -1,0 +1,8 @@
+INSERT INTO petTypes (PETTYPES_ID, NAME) VALUES (1, 'cat')
+#GO
+INSERT INTO petTypes (PETTYPES_ID, NAME) VALUES (2, 'dog')
+#GO
+INSERT INTO petTypes (PETTYPES_ID, NAME) VALUES (3, 'hamster')
+#GO
+INSERT INTO petTypes (PETTYPES_ID, NAME) VALUES (4, 'lizard')
+#GO

@@ -1,5 +1,5 @@
 /**
- *
+ * Gets the owner by its Id.
  * @author vv
  * @public
  * @name Owner_Query
