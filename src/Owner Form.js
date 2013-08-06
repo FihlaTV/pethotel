@@ -38,7 +38,6 @@ function btnDeletePetActionPerformed(evt) {//GEN-FIRST:event_btnDeletePetActionP
 
 function btnAddVisitActionPerformed(evt) {//GEN-FIRST:event_btnAddVisitActionPerformed
     visits.insert();
-    //visits.PET = pets.PETS_ID;
 }//GEN-LAST:event_btnAddVisitActionPerformed
 
 function btnDeleteVisitActionPerformed(evt) {//GEN-FIRST:event_btnDeleteVisitActionPerformed
