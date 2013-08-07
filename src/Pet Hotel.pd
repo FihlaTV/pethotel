@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><datamodel datamodelDbId="null">
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="137568669302300" entityLocationX="398" entityLocationY="17" entityWidth="150" tableName="Visit"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="137568661639692" entityLocationX="674" entityLocationY="226" entityWidth="150" tableName="PetTypes"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="137568645121708" entityLocationX="421" entityLocationY="251" entityWidth="150" tableName="Pets"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="137568636427128" entityLocationX="75" entityLocationY="213" entityWidth="150" tableName="Owners"/>
-</datamodel>
