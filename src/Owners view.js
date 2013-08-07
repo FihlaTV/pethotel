@@ -1,7 +1,7 @@
 /**
  * Shows the owners list.
  * @author vv
- * @name Owners
+ * @name OwnersView
  */
 
 /**
@@ -9,8 +9,8 @@
  * @param evt Event object
  */
 function btnAddActionPerformed(evt) {//GEN-FIRST:event_btnAddActionPerformed
-    var ownerForm = new OwnerForm();
-    ownerForm.showModal(refresh);
+    var ownerView = new OwnerView();
+    ownerView.showModal(refresh);
 }//GEN-LAST:event_btnAddActionPerformed
 
 /**
@@ -19,15 +19,11 @@ function btnAddActionPerformed(evt) {//GEN-FIRST:event_btnAddActionPerformed
  */
 function btnDeleteActionPerformed(evt) {//GEN-FIRST:event_btnDeleteActionPerformed
     if (confirm("Delete owner?")) {
-        owners_Query.deleteRow();
+        ownersQuery.deleteRow();
         model.save();
     }
 }//GEN-LAST:event_btnDeleteActionPerformed
 
-/**
- * Edit selected owner button's click event handler.
- * @param evt Event object
- */
 /**
  * Grid click event handler.
  * @param evt Event object
@@ -47,9 +43,9 @@ function btnSearchActionPerformed(evt) {//GEN-FIRST:event_btnSearchActionPerform
 }//GEN-LAST:event_btnSearchActionPerformed
 
 function editOwner() {
-    var ownerForm = new OwnerForm();
-    ownerForm.OwnerId = owners_Query.OWNERS_ID;
-    ownerForm.showModal(refresh);
+    var ownerView = new OwnerView();
+    ownerView.OwnerId = ownersQuery.OWNERS_ID;
+    ownerView.showModal(refresh);
 }
 
 function refresh() {

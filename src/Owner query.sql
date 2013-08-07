@@ -2,7 +2,7 @@
  * Gets the owner by its Id.
  * @author vv
  * @public
- * @name Owner_Query
+ * @name OwnerQuery
  */ 
 Select * 
 From OWNERS t1

@@ -2,7 +2,7 @@
  * Gets all types for pets.
  * @public 
  * @author vv
- * @name PetTypes
+ * @name PetTypesQuery
  */ 
 Select * 
 From PETTYPES t1

@@ -2,7 +2,7 @@
  * Gets the pets for concrete owner.
  * @public 
  * @author vv
- * @name Pets_Query
+ * @name PetsQuery
  */ 
 Select * 
 From PETS t1

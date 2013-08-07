@@ -1,7 +1,7 @@
 /**
  * Allows to edit the owner, add and edit his/her pets and pets visit to the hotel. 
  * @author vv
- * @name OwnerForm
+ * @name OwnerView
  */
 
 /**
@@ -157,7 +157,7 @@ function validateVisits() {
             message += "Visit to date is required.\n";
         }
         if (visit.FROMDATE >= visit.TODATE) {
-            message += "Visit 'from' date must me before 'to' date.\n";
+            message += "Visit 'from' date must be before 'to' date.\n";
         }
     });
     return message;
