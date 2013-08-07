@@ -2,7 +2,7 @@
  * Gets all visits for concrete owner.
  * @public
  * @author vv
- * @name Visits
+ * @name VisitsQuery
  */ 
 Select t1.VISIT_ID, t1.PET, t1.FROMDATE, t1.TODATE, t1.DESCRIPTION
 From VISIT t1
