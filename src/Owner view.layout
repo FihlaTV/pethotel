@@ -37,8 +37,8 @@
   <widget actionPerformed="btnSaveActionPerformed" name="btnSave" parent="Form" prefHeight="27px" prefWidth="70px" text="OK" type="ButtonDesignInfo">
     <constraints bottom="11px" height="27px" right="109px" type="MarginConstraintsDesignInfo" width="70px"/>
   </widget>
-  <widget actionPerformed="btnCancelActionPerformed" name="btnCancel" parent="Form" prefHeight="27px" prefWidth="70px" text="Cancel" type="ButtonDesignInfo">
-    <constraints bottom="11px" height="27px" right="25px" type="MarginConstraintsDesignInfo" width="70px"/>
+  <widget actionPerformed="btnCancelActionPerformed" name="btnCancel" parent="Form" prefHeight="27px" prefWidth="84px" text="Cancel" type="ButtonDesignInfo">
+    <constraints bottom="11px" height="27px" right="11px" type="MarginConstraintsDesignInfo" width="84px"/>
   </widget>
   <widget dividerLocation="400" leftComponent="panel" name="splitPane" parent="Form" prefHeight="259px" prefWidth="804px" resizeWeight="0.5" rightComponent="panel1" type="SplitDesignInfo">
     <constraints bottom="50px" left="0px" right="-1px" top="252px" type="MarginConstraintsDesignInfo"/>
@@ -52,7 +52,6 @@
     </rowsColumnsDesignInfo>
     <treeDesignInfo/>
     <column name="petName" title="Name" width="150">
-      <datamodelElement entityId="137570404221790" fieldName="NAME"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -61,13 +60,13 @@
         <columnsKeyField/>
         <cellValueField/>
       </cellDesignInfo>
+      <datamodelElement entityId="137570404221790" fieldName="NAME"/>
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="petType" title="Type" width="150">
-      <datamodelElement entityId="137570404221790" fieldName="TYPE"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -76,16 +75,16 @@
         <columnsKeyField/>
         <cellValueField/>
       </cellDesignInfo>
+      <datamodelElement entityId="137570404221790" fieldName="TYPE"/>
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
       <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
-        <displayField entityId="137570456419958" fieldName="NAME"/>
         <valueField entityId="137570456419958" fieldName="PETTYPES_ID"/>
+        <displayField entityId="137570456419958" fieldName="NAME"/>
       </controlInfo>
     </column>
     <column name="birthdate" title="Birthdate" width="150">
-      <datamodelElement entityId="137570404221790" fieldName="BIRTHDATE"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -94,6 +93,7 @@
         <columnsKeyField/>
         <cellValueField/>
       </cellDesignInfo>
+      <datamodelElement entityId="137570404221790" fieldName="BIRTHDATE"/>
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
@@ -115,7 +115,6 @@
     </rowsColumnsDesignInfo>
     <treeDesignInfo/>
     <column name="fromDate" title="From" width="150">
-      <datamodelElement entityId="137570537858405" fieldName="FROMDATE"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -124,13 +123,13 @@
         <columnsKeyField/>
         <cellValueField/>
       </cellDesignInfo>
+      <datamodelElement entityId="137570537858405" fieldName="FROMDATE"/>
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
       <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="toDate" title="To" width="150">
-      <datamodelElement entityId="137570537858405" fieldName="TODATE"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -139,13 +138,13 @@
         <columnsKeyField/>
         <cellValueField/>
       </cellDesignInfo>
+      <datamodelElement entityId="137570537858405" fieldName="TODATE"/>
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
       <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="description" title="Description" width="150">
-      <datamodelElement entityId="137570537858405" fieldName="DESCRIPTION"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -154,6 +153,7 @@
         <columnsKeyField/>
         <cellValueField/>
       </cellDesignInfo>
+      <datamodelElement entityId="137570537858405" fieldName="DESCRIPTION"/>
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>

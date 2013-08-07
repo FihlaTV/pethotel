@@ -28,10 +28,6 @@ function btnDeleteActionPerformed(evt) {//GEN-FIRST:event_btnDeleteActionPerform
  * Edit selected owner button's click event handler.
  * @param evt Event object
  */
-function btnEditActionPerformed(evt) {//GEN-FIRST:event_btnEditActionPerformed
-    editOwner();
-}//GEN-LAST:event_btnEditActionPerformed
-
 /**
  * Grid click event handler.
  * @param evt Event object
@@ -41,6 +37,14 @@ function grdOwnersMouseClicked(evt) {//GEN-FIRST:event_grdOwnersMouseClicked
         editOwner();
     }
 }//GEN-LAST:event_grdOwnersMouseClicked
+
+/**
+ * Search button click event handler.
+ * @param evt Event object
+ */
+function btnSearchActionPerformed(evt) {//GEN-FIRST:event_btnSearchActionPerformed
+	LastNamePattern = '%' + txtSearch.text + '%';
+}//GEN-LAST:event_btnSearchActionPerformed
 
 function editOwner() {
     var ownerForm = new OwnerForm();
