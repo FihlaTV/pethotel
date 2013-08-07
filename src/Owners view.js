@@ -42,6 +42,16 @@ function btnSearchActionPerformed(evt) {//GEN-FIRST:event_btnSearchActionPerform
 	LastNamePattern = '%' + txtSearch.text + '%';
 }//GEN-LAST:event_btnSearchActionPerformed
 
+/**
+ * Report button click event handler.
+ * @param evt Event object
+ */
+function btnReportActionPerformed(evt) {//GEN-FIRST:event_btnReportActionPerformed
+	var ownersReport = new OwnersReport();
+        ownersReport.params.lastNamePattern = LastNamePattern;
+        ownersReport.show();
+}//GEN-LAST:event_btnReportActionPerformed
+
 function editOwner() {
     var ownerView = new OwnerView();
     ownerView.OwnerId = ownersQuery.OWNERS_ID;

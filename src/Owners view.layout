@@ -4,6 +4,7 @@
   </widget>
   <widget actionPerformed="btnAddActionPerformed" focusable="false" horizontalTextPosition="0" name="btnAdd" parent="toolBar" prefHeight="23px" prefWidth="32px" text="Add" type="ButtonDesignInfo" verticalTextPosition="3"/>
   <widget actionPerformed="btnDeleteActionPerformed" focusable="false" horizontalTextPosition="0" name="btnDelete" parent="toolBar" prefHeight="23px" prefWidth="49px" text="Delete" type="ButtonDesignInfo" verticalTextPosition="3"/>
+  <widget actionPerformed="btnReportActionPerformed" focusable="false" horizontalTextPosition="0" name="btnReport" parent="toolBar" prefHeight="23px" prefWidth="50px" text="Report" type="ButtonDesignInfo" verticalTextPosition="3"/>
   <widget deletable="false" editable="false" insertable="false" mouseClicked="grdOwnersMouseClicked" name="grdOwners" parent="Form" prefHeight="408px" prefWidth="732px" type="DbGridDesignInfo">
     <rowsColumnsDesignInfo>
       <rowsDatasource entityId="137568719089436" field="false"/>
