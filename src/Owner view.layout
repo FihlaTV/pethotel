@@ -46,7 +46,7 @@
   <widget name="panel" parent="splitPane" prefHeight="257px" prefWidth="399px" type="PanelDesignInfo">
     <layout type="MarginLayoutDesignInfo"/>
   </widget>
-  <widget name="grdPets" parent="panel" prefHeight="235px" prefWidth="396px" type="DbGridDesignInfo">
+  <widget name="grdPets" parent="panel" prefHeight="223px" prefWidth="396px" type="DbGridDesignInfo">
     <column name="petName" title="Name" width="150">
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
       <columnsDatasource/>
@@ -99,17 +99,17 @@
       <rowsDatasource entityId="137570404221790" field="false"/>
     </rowsColumnsDesignInfo>
     <treeDesignInfo/>
-    <constraints bottom="-2px" left="0px" right="3px" top="24px" type="MarginConstraintsDesignInfo"/>
+    <constraints bottom="-2px" left="0px" right="3px" top="36px" type="MarginConstraintsDesignInfo"/>
   </widget>
-  <widget floatable="false" name="toolBar" opaque="false" parent="panel" prefHeight="25px" prefWidth="396px" rollover="true" type="ToolbarDesignInfo">
-    <constraints height="25px" left="0px" top="0px" type="MarginConstraintsDesignInfo" width="396px"/>
+  <widget floatable="false" name="toolBar" opaque="false" parent="panel" prefHeight="30px" prefWidth="396px" rollover="true" type="ToolbarDesignInfo">
+    <constraints height="30px" left="0px" top="0px" type="MarginConstraintsDesignInfo" width="396px"/>
   </widget>
-  <widget actionPerformed="btnAddPetActionPerformed" focusable="false" horizontalTextPosition="0" name="btnAddPet" parent="toolBar" prefHeight="23px" prefWidth="32px" text="Add" type="ButtonDesignInfo" verticalTextPosition="3"/>
-  <widget actionPerformed="btnDeletePetActionPerformed" focusable="false" horizontalTextPosition="0" name="btnDeletePet" parent="toolBar" prefHeight="23px" prefWidth="49px" text="Delete" type="ButtonDesignInfo" verticalTextPosition="3"/>
+  <widget actionPerformed="btnAddPetActionPerformed" focusable="false" horizontalTextPosition="0" icon="img/list-add.png" name="btnAddPet" parent="toolBar" prefHeight="30px" prefWidth="32px" toolTipText="New pet" type="ButtonDesignInfo" verticalTextPosition="3"/>
+  <widget actionPerformed="btnDeletePetActionPerformed" focusable="false" horizontalTextPosition="0" icon="img/list-remove.png" name="btnDeletePet" parent="toolBar" prefHeight="30px" prefWidth="32px" toolTipText="Delete" type="ButtonDesignInfo" verticalTextPosition="3"/>
   <widget name="panel1" parent="splitPane" prefHeight="257px" prefWidth="398px" type="PanelDesignInfo">
     <layout type="MarginLayoutDesignInfo"/>
   </widget>
-  <widget name="grdVisits" parent="panel1" prefHeight="235px" prefWidth="401px" type="DbGridDesignInfo">
+  <widget name="grdVisits" parent="panel1" prefHeight="223px" prefWidth="401px" type="DbGridDesignInfo">
     <column name="fromDate" title="From" width="150">
       <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
       <columnsDatasource/>
@@ -159,13 +159,13 @@
       <rowsDatasource entityId="137570537858405" field="false"/>
     </rowsColumnsDesignInfo>
     <treeDesignInfo/>
-    <constraints bottom="-2px" left="0px" right="-3px" top="24px" type="MarginConstraintsDesignInfo"/>
+    <constraints bottom="-2px" left="0px" right="-3px" top="36px" type="MarginConstraintsDesignInfo"/>
   </widget>
-  <widget floatable="false" name="toolBar1" opaque="false" parent="panel1" prefHeight="25px" prefWidth="396px" rollover="true" type="ToolbarDesignInfo">
-    <constraints height="25px" left="0px" top="0px" type="MarginConstraintsDesignInfo" width="396px"/>
+  <widget floatable="false" name="toolBar1" opaque="false" parent="panel1" prefHeight="30px" prefWidth="396px" rollover="true" type="ToolbarDesignInfo">
+    <constraints height="30px" left="0px" top="0px" type="MarginConstraintsDesignInfo" width="396px"/>
   </widget>
-  <widget actionPerformed="btnAddVisitActionPerformed" focusable="false" horizontalTextPosition="0" name="btnAddVisit" parent="toolBar1" prefHeight="23px" prefWidth="32px" text="Add" type="ButtonDesignInfo" verticalTextPosition="3"/>
-  <widget actionPerformed="btnDeleteVisitActionPerformed" focusable="false" horizontalTextPosition="0" name="btnDeleteVisit" parent="toolBar1" prefHeight="23px" prefWidth="49px" text="Delete" type="ButtonDesignInfo" verticalTextPosition="3"/>
+  <widget actionPerformed="btnAddVisitActionPerformed" focusable="false" horizontalTextPosition="0" icon="img/list-add.png" name="btnAddVisit" parent="toolBar1" prefHeight="30px" prefWidth="32px" toolTipText="New vist to hotel" type="ButtonDesignInfo" verticalTextPosition="3"/>
+  <widget actionPerformed="btnDeleteVisitActionPerformed" focusable="false" horizontalTextPosition="0" icon="img/list-remove.png" name="btnDeleteVisit" parent="toolBar1" prefHeight="30px" prefWidth="32px" toolTipText="Delete visit" type="ButtonDesignInfo" verticalTextPosition="3"/>
   <widget name="label" parent="Form" prefHeight="24px" prefWidth="132px" text="Pets &amp; visits:" type="LabelDesignInfo">
     <easFont name="DejaVu Sans" size="14"/>
     <constraints height="24px" left="12px" top="216px" type="MarginConstraintsDesignInfo" width="132px"/>
