@@ -6,4 +6,4 @@
  */ 
 Select * 
 From PETS t1
- Where :OwnerID = t1.OWNER
+ Where :ownerID = t1.OWNER

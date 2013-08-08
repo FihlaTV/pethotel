@@ -47,11 +47,8 @@
     <layout type="MarginLayoutDesignInfo"/>
   </widget>
   <widget name="grdPets" parent="panel" prefHeight="235px" prefWidth="396px" type="DbGridDesignInfo">
-    <rowsColumnsDesignInfo>
-      <rowsDatasource entityId="137570404221790" field="false"/>
-    </rowsColumnsDesignInfo>
-    <treeDesignInfo/>
     <column name="petName" title="Name" width="150">
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -64,9 +61,12 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="petType" title="Type" width="150">
+      <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
+        <valueField entityId="137570456419958" fieldName="PETTYPES_ID"/>
+        <displayField entityId="137570456419958" fieldName="NAME"/>
+      </controlInfo>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -79,12 +79,9 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
-        <valueField entityId="137570456419958" fieldName="PETTYPES_ID"/>
-        <displayField entityId="137570456419958" fieldName="NAME"/>
-      </controlInfo>
     </column>
     <column name="birthdate" title="Birthdate" width="150">
+      <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -97,8 +94,11 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="137570404221790" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
     <constraints bottom="-2px" left="0px" right="3px" top="24px" type="MarginConstraintsDesignInfo"/>
   </widget>
   <widget floatable="false" name="toolBar" opaque="false" parent="panel" prefHeight="25px" prefWidth="396px" rollover="true" type="ToolbarDesignInfo">
@@ -110,11 +110,8 @@
     <layout type="MarginLayoutDesignInfo"/>
   </widget>
   <widget name="grdVisits" parent="panel1" prefHeight="235px" prefWidth="401px" type="DbGridDesignInfo">
-    <rowsColumnsDesignInfo>
-      <rowsDatasource entityId="137570537858405" field="false"/>
-    </rowsColumnsDesignInfo>
-    <treeDesignInfo/>
     <column name="fromDate" title="From" width="150">
+      <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -127,9 +124,9 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="toDate" title="To" width="150">
+      <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -142,9 +139,9 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="description" title="Description" width="150">
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -157,8 +154,11 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="137570537858405" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
     <constraints bottom="-2px" left="0px" right="-3px" top="24px" type="MarginConstraintsDesignInfo"/>
   </widget>
   <widget floatable="false" name="toolBar1" opaque="false" parent="panel1" prefHeight="25px" prefWidth="396px" rollover="true" type="ToolbarDesignInfo">

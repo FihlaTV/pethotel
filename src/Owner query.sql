@@ -6,4 +6,4 @@
  */ 
 Select * 
 From OWNERS t1
- Where :OwnerId = t1.OWNERS_ID
+ Where :ownerID = t1.OWNERS_ID

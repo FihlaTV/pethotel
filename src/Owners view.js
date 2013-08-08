@@ -54,7 +54,7 @@ function btnReportActionPerformed(evt) {//GEN-FIRST:event_btnReportActionPerform
 
 function editOwner() {
     var ownerView = new OwnerView();
-    ownerView.OwnerId = ownersQuery.OWNERS_ID;
+    ownerView.ownerID = ownersQuery.OWNERS_ID;
     ownerView.showModal(refresh);
 }
 

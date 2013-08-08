@@ -32,7 +32,7 @@ function btnCancelActionPerformed(evt) {//GEN-FIRST:event_btnCancelActionPerform
  * @param evt Event object
  */
 function owner_OnRequeried(evt) {//GEN-FIRST:event_owner_OnRequeried
-    if (!OwnerId) {
+    if (!ownerID) {
         owner.insert();
     }
 }//GEN-LAST:event_owner_OnRequeried
