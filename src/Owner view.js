@@ -21,7 +21,7 @@ function btnSaveActionPerformed(evt) {//GEN-FIRST:event_btnSaveActionPerformed
 
 /**
  * Cancel button's click event handler.
- * @param {type} evt Event object
+ * @param evt Event object
  */
 function btnCancelActionPerformed(evt) {//GEN-FIRST:event_btnCancelActionPerformed
     close();
@@ -39,7 +39,7 @@ function owner_OnRequeried(evt) {//GEN-FIRST:event_owner_OnRequeried
 
 /**
  * Add pet button's click event handler.
- * @param {type} evt Event object
+ * @param evt Event object
  */
 function btnAddPetActionPerformed(evt) {//GEN-FIRST:event_btnAddPetActionPerformed
     pets.insert();
@@ -48,7 +48,7 @@ function btnAddPetActionPerformed(evt) {//GEN-FIRST:event_btnAddPetActionPerform
 
 /**
  * Delete pet button's click event handler. Deletes selected pet.
- * @param {type} evt Event object
+ * @param evt Event object
  */
 function btnDeletePetActionPerformed(evt) {//GEN-FIRST:event_btnDeletePetActionPerformed
     if (confirm('Delete pet?', title)) {
@@ -58,7 +58,7 @@ function btnDeletePetActionPerformed(evt) {//GEN-FIRST:event_btnDeletePetActionP
 
 /**
  * Add visit button's click event handler.
- * @param {type} evt Event object
+ * @param evt Event object
  */
 function btnAddVisitActionPerformed(evt) {//GEN-FIRST:event_btnAddVisitActionPerformed
     visits.insert();
@@ -66,7 +66,7 @@ function btnAddVisitActionPerformed(evt) {//GEN-FIRST:event_btnAddVisitActionPer
 
 /**
  * Delete visit button's click event handler.
- * @param {type} evt Event object
+ * @param evt Event object
  */
 function btnDeleteVisitActionPerformed(evt) {//GEN-FIRST:event_btnDeleteVisitActionPerformed
     if (confirm('Delete visit?', title)) {
@@ -76,7 +76,7 @@ function btnDeleteVisitActionPerformed(evt) {//GEN-FIRST:event_btnDeleteVisitAct
 
 /**
  * Pet's entity cursor movement event handler.
- * @param {type} evt Event object
+ * @param evt Event object
  */
 function petsWillScroll(evt) {//GEN-FIRST:event_petsWillScroll
     Logger.info('Pets scroll event.');
