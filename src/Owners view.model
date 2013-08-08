@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <parameters>
-    <parameter description="" name="LastNamePattern" nullable="false" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="100" type="12" typeName="VARCHAR"/>
+    <parameter description="" name="lastNamePattern" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="100" type="12" typeName="VARCHAR"/>
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150"/>
   <entity Name="ownersQuery" Title="Owners Query" entityHeight="200" entityIconified="false" entityId="137568719089436" entityLocationX="270" entityLocationY="42" entityWidth="150" queryId="OwnersQuery" tableName="" tableSchemaName=""/>
-  <relation leftEntityId="-1" leftEntityParameterName="LastNamePattern" rightEntityId="137568719089436" rightEntityParameterName="LastNamePattern"/>
+  <relation leftEntityId="-1" leftEntityParameterName="lastNamePattern" rightEntityId="137568719089436" rightEntityParameterName="lastNamePattern"/>
 </datamodel>

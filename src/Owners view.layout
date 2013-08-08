@@ -6,11 +6,8 @@
   <widget actionPerformed="btnDeleteActionPerformed" focusable="false" horizontalTextPosition="0" name="btnDelete" parent="toolBar" prefHeight="23px" prefWidth="49px" text="Delete" type="ButtonDesignInfo" verticalTextPosition="3"/>
   <widget actionPerformed="btnReportActionPerformed" focusable="false" horizontalTextPosition="0" name="btnReport" parent="toolBar" prefHeight="23px" prefWidth="50px" text="Report" type="ButtonDesignInfo" verticalTextPosition="3"/>
   <widget deletable="false" editable="false" insertable="false" mouseClicked="grdOwnersMouseClicked" name="grdOwners" parent="Form" prefHeight="408px" prefWidth="732px" type="DbGridDesignInfo">
-    <rowsColumnsDesignInfo>
-      <rowsDatasource entityId="137568719089436" field="false"/>
-    </rowsColumnsDesignInfo>
-    <treeDesignInfo/>
     <column name="fullName" title="Name" width="150">
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -23,9 +20,9 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="aDDRESS" title="Address" width="150">
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -38,9 +35,9 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="cITY" title="City" width="150">
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -53,9 +50,9 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="tELEPHONE" title="Telephone" width="150">
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -68,8 +65,11 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="137568719089436" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
     <constraints bottom="-5px" left="0px" right="-4px" top="48px" type="MarginConstraintsDesignInfo"/>
   </widget>
   <widget name="panel" parent="Form" prefHeight="48px" prefWidth="288px" type="PanelDesignInfo">

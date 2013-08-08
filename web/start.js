@@ -5,8 +5,8 @@ if (!platypus) {
 	var platypus = {}
 }
 platypus.ready = function() {
-	require(['Owners'], function(){
-		var f = new Owners()
+	require(['OwnersView'], function(){
+		var f = new OwnersView()
 		f.show()
 	})
 }

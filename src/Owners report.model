@@ -4,5 +4,5 @@
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="19" entityLocationY="23" entityWidth="150"/>
   <entity Name="owners" Title="Owners query" entityHeight="200" entityIconified="false" entityId="137588031682085" entityLocationX="282" entityLocationY="51" entityWidth="150" queryId="OwnersQuery" tableName="" tableSchemaName=""/>
-  <relation leftEntityId="-1" leftEntityParameterName="lastNamePattern" rightEntityId="137588031682085" rightEntityParameterName="LastNamePattern"/>
+  <relation leftEntityId="-1" leftEntityParameterName="lastNamePattern" rightEntityId="137588031682085" rightEntityParameterName="lastNamePattern"/>
 </datamodel>

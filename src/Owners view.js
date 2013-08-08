@@ -39,7 +39,7 @@ function grdOwnersMouseClicked(evt) {//GEN-FIRST:event_grdOwnersMouseClicked
  * @param evt Event object
  */
 function btnSearchActionPerformed(evt) {//GEN-FIRST:event_btnSearchActionPerformed
-	LastNamePattern = '%' + txtSearch.text + '%';
+	lastNamePattern = '%' + txtSearch.text + '%';
 }//GEN-LAST:event_btnSearchActionPerformed
 
 /**
@@ -48,7 +48,7 @@ function btnSearchActionPerformed(evt) {//GEN-FIRST:event_btnSearchActionPerform
  */
 function btnReportActionPerformed(evt) {//GEN-FIRST:event_btnReportActionPerformed
 	var ownersReport = new OwnersReport();
-        ownersReport.params.lastNamePattern = LastNamePattern;
+        ownersReport.params.lastNamePattern = lastNamePattern;
         ownersReport.show();
 }//GEN-LAST:event_btnReportActionPerformed
 
