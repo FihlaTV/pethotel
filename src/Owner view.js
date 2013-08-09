@@ -9,13 +9,15 @@
  * @param evt Event object
  */
 function btnSaveActionPerformed(evt) {//GEN-FIRST:event_btnSaveActionPerformed
-    var message = validate();
-    if (!message) {
-        model.save(function() {
-            close(owner.OWNERS_ID);
-        });
-    } else {
-        alert(message, title);
+    if (model.modified) {
+        var message = validate();
+        if (!message) {
+            model.save(function() {
+                close(owner.OWNERS_ID);
+            });
+        } else {
+            alert(message, title);
+        }
     }
 }//GEN-LAST:event_btnSaveActionPerformed
 
