@@ -52,8 +52,8 @@
 <table description="" name="PETS">
 <columns>
 <column description="" isPk="true" javaType="java.math.BigDecimal" name="PETS_ID" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
-<column description="" isPk="false" javaType="java.math.BigDecimal" name="OWNER" nullable="true" precision="10" scale="32767" signed="true" size="65535" type="3" typeName="DECIMAL"/>
-<column description="" isPk="false" javaType="java.math.BigDecimal" name="TYPE" nullable="true" precision="10" scale="32767" signed="true" size="65535" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.math.BigDecimal" name="OWNER" nullable="false" precision="10" scale="32767" signed="true" size="65535" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.math.BigDecimal" name="TYPE" nullable="false" precision="10" scale="32767" signed="true" size="65535" type="3" typeName="DECIMAL"/>
 <column description="" isPk="false" javaType="java.lang.String" name="NAME" nullable="true" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>
 <column description="" isPk="false" javaType="java.util.Date" name="BIRTHDATE" nullable="true" precision="10" scale="10" signed="true" size="23" type="93" typeName="TIMESTAMP"/>
 </columns>
@@ -115,7 +115,7 @@
 <table description="" name="VISIT">
 <columns>
 <column description="" isPk="true" javaType="java.math.BigDecimal" name="VISIT_ID" nullable="false" precision="10" scale="0" signed="true" size="18" type="3" typeName="DECIMAL"/>
-<column description="" isPk="false" javaType="java.math.BigDecimal" name="PET" nullable="true" precision="10" scale="32767" signed="true" size="65535" type="3" typeName="DECIMAL"/>
+<column description="" isPk="false" javaType="java.math.BigDecimal" name="PET" nullable="false" precision="10" scale="32767" signed="true" size="65535" type="3" typeName="DECIMAL"/>
 <column description="" isPk="false" javaType="java.util.Date" name="FROMDATE" nullable="true" precision="10" scale="10" signed="true" size="23" type="93" typeName="TIMESTAMP"/>
 <column description="" isPk="false" javaType="java.util.Date" name="TODATE" nullable="true" precision="10" scale="10" signed="true" size="23" type="93" typeName="TIMESTAMP"/>
 <column description="" isPk="false" javaType="java.lang.String" name="DESCRIPTION" nullable="true" precision="10" scale="0" signed="true" size="100" type="12" typeName="VARCHAR"/>

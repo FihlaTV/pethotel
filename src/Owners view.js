@@ -39,7 +39,7 @@ function grdOwnersMouseClicked(evt) {//GEN-FIRST:event_grdOwnersMouseClicked
  * @param evt Event object
  */
 function btnSearchActionPerformed(evt) {//GEN-FIRST:event_btnSearchActionPerformed
-	lastNamePattern = '%' + txtSearch.text + '%';
+    lastNamePattern = '%' + txtSearch.text + '%';
 }//GEN-LAST:event_btnSearchActionPerformed
 
 /**
@@ -47,10 +47,14 @@ function btnSearchActionPerformed(evt) {//GEN-FIRST:event_btnSearchActionPerform
  * @param evt Event object
  */
 function btnReportActionPerformed(evt) {//GEN-FIRST:event_btnReportActionPerformed
-	var ownersReport = new OwnersReport();
-        ownersReport.params.lastNamePattern = lastNamePattern;
-        ownersReport.show();
+    var ownersReport = new OwnersReport();
+    ownersReport.params.lastNamePattern = lastNamePattern;
+    ownersReport.show();
 }//GEN-LAST:event_btnReportActionPerformed
+
+function txtSearchActionPerformed(evt) {//GEN-FIRST:event_txtSearchActionPerformed
+    btnSearchActionPerformed(null);
+}//GEN-LAST:event_txtSearchActionPerformed
 
 function editOwner() {
     var ownerView = new OwnerView();
@@ -59,5 +63,8 @@ function editOwner() {
 }
 
 function refresh() {
-    model.requery();
+    var owner = ownersQuery.getRow(ownersQuery.rowIndex);
+    model.requery(function(){
+        grdOwners.makeVisible(owner, true);
+    });
 }

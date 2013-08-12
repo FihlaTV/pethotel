@@ -4,6 +4,8 @@
  * @name OwnerView
  */
 
+var DEFAULT_PET_TYPE = 2;// Dog
+
 /**
  * Save button's click event handler.
  * @param evt Event object
@@ -16,7 +18,7 @@ function btnSaveActionPerformed(evt) {//GEN-FIRST:event_btnSaveActionPerformed
                 close(owner.OWNERS_ID);
             });
         } else {
-            alert(message, title);
+            alert(message);
         }
     }
 }//GEN-LAST:event_btnSaveActionPerformed
@@ -44,8 +46,10 @@ function owner_OnRequeried(evt) {//GEN-FIRST:event_owner_OnRequeried
  * @param evt Event object
  */
 function btnAddPetActionPerformed(evt) {//GEN-FIRST:event_btnAddPetActionPerformed
-    pets.insert();
-    pets.OWNER = owner.OWNERS_ID;
+    pets.insert(
+            pets.md.OWNER, owner.OWNERS_ID,
+            pets.md.TYPE, DEFAULT_PET_TYPE
+            );
 }//GEN-LAST:event_btnAddPetActionPerformed
 
 /**
@@ -53,7 +57,7 @@ function btnAddPetActionPerformed(evt) {//GEN-FIRST:event_btnAddPetActionPerform
  * @param evt Event object
  */
 function btnDeletePetActionPerformed(evt) {//GEN-FIRST:event_btnDeletePetActionPerformed
-    if (confirm('Delete pet?', title)) {
+    if (confirm('Delete pet?')) {
         pets.deleteRow();
     }
 }//GEN-LAST:event_btnDeletePetActionPerformed
@@ -63,7 +67,10 @@ function btnDeletePetActionPerformed(evt) {//GEN-FIRST:event_btnDeletePetActionP
  * @param evt Event object
  */
 function btnAddVisitActionPerformed(evt) {//GEN-FIRST:event_btnAddVisitActionPerformed
-    visits.insert();
+    if (pets.PETS_ID)
+        visits.insert();//(visits.md.PET, pets.PETS_ID);
+    else
+        alert("Select a pet please.");
 }//GEN-LAST:event_btnAddVisitActionPerformed
 
 /**
@@ -71,7 +78,7 @@ function btnAddVisitActionPerformed(evt) {//GEN-FIRST:event_btnAddVisitActionPer
  * @param evt Event object
  */
 function btnDeleteVisitActionPerformed(evt) {//GEN-FIRST:event_btnDeleteVisitActionPerformed
-    if (confirm('Delete visit?', title)) {
+    if (confirm('Delete visit?')) {
         visits.deleteRow();
     }
 }//GEN-LAST:event_btnDeleteVisitActionPerformed
