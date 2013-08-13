@@ -99,7 +99,7 @@
       </headerStyle>
       <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
-    <constraints height="246px" left="0px" top="41px" type="MarginConstraintsDesignInfo" width="396px"/>
+    <constraints bottom="-1px" left="0px" right="3px" top="41px" type="MarginConstraintsDesignInfo"/>
   </widget>
   <widget floatable="false" name="toolBar" opaque="false" parent="panel" prefHeight="42px" prefWidth="396px" rollover="true" type="ToolbarDesignInfo">
     <constraints height="42px" left="0px" right="3px" top="0px" type="MarginConstraintsDesignInfo"/>
@@ -159,7 +159,7 @@
       </headerStyle>
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
-    <constraints height="246px" left="0px" top="41px" type="MarginConstraintsDesignInfo" width="401px"/>
+    <constraints bottom="-1px" left="0px" right="-3px" top="41px" type="MarginConstraintsDesignInfo"/>
   </widget>
   <widget floatable="false" name="toolBar1" opaque="false" parent="panel1" prefHeight="42px" prefWidth="396px" rollover="true" type="ToolbarDesignInfo">
     <constraints height="42px" left="0px" right="2px" top="0px" type="MarginConstraintsDesignInfo"/>
