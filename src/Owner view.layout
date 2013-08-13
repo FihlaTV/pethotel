@@ -52,6 +52,7 @@
     </rowsColumnsDesignInfo>
     <treeDesignInfo/>
     <column name="petName" title="Name" width="150">
+      <datamodelElement entityId="137570404221790" fieldName="NAME"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -63,10 +64,10 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <datamodelElement entityId="137570404221790" fieldName="NAME"/>
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="petType" title="Type" width="150">
+      <datamodelElement entityId="137570404221790" fieldName="TYPE"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -78,13 +79,13 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <datamodelElement entityId="137570404221790" fieldName="TYPE"/>
       <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
         <valueField entityId="137570456419958" fieldName="PETTYPES_ID"/>
         <displayField entityId="137570456419958" fieldName="NAME"/>
       </controlInfo>
     </column>
     <column name="birthdate" title="Birthdate" width="150">
+      <datamodelElement entityId="137570404221790" fieldName="BIRTHDATE"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -96,7 +97,6 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <datamodelElement entityId="137570404221790" fieldName="BIRTHDATE"/>
       <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <constraints height="246px" left="0px" top="41px" type="MarginConstraintsDesignInfo" width="396px"/>
@@ -115,6 +115,7 @@
     </rowsColumnsDesignInfo>
     <treeDesignInfo/>
     <column name="fromDate" title="From" width="150">
+      <datamodelElement entityId="137570537858405" fieldName="FROMDATE"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -126,10 +127,10 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <datamodelElement entityId="137570537858405" fieldName="FROMDATE"/>
       <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="toDate" title="To" width="150">
+      <datamodelElement entityId="137570537858405" fieldName="TODATE"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -141,10 +142,10 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <datamodelElement entityId="137570537858405" fieldName="TODATE"/>
       <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="description" title="Description" width="150">
+      <datamodelElement entityId="137570537858405" fieldName="DESCRIPTION"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -156,7 +157,6 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <datamodelElement entityId="137570537858405" fieldName="DESCRIPTION"/>
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <constraints height="246px" left="0px" top="41px" type="MarginConstraintsDesignInfo" width="401px"/>

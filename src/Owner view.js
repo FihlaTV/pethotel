@@ -20,6 +20,8 @@ function btnSaveActionPerformed(evt) {//GEN-FIRST:event_btnSaveActionPerformed
         } else {
             alert(message);
         }
+    } else {
+        close();
     }
 }//GEN-LAST:event_btnSaveActionPerformed
 
