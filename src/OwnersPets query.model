@@ -5,6 +5,6 @@
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
   <entity Title="Owners query" entityHeight="200" entityIconified="false" entityId="137630863221799" entityLocationX="290" entityLocationY="34" entityWidth="150" queryId="OwnersQuery" tableAlias="q1" tableName="" tableSchemaName=""/>
   <entity Title="PETS" entityHeight="200" entityIconified="false" entityId="137630908623226" entityLocationX="542" entityLocationY="46" entityWidth="150" tableAlias="t" tableName="PETS" tableSchemaName=""/>
-  <relation leftEntityFieldName="OWNER" leftEntityId="137630908623226" rightEntityFieldName="OWNERS_ID" rightEntityId="137630863221799"/>
   <relation leftEntityId="-1" leftEntityParameterName="lastNamePattern" rightEntityId="137630863221799" rightEntityParameterName="lastNamePattern"/>
+  <relation leftEntityFieldName="OWNER" leftEntityId="137630908623226" rightEntityFieldName="OWNERS_ID" rightEntityId="137630863221799"/>
 </datamodel>

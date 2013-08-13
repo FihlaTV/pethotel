@@ -19,7 +19,7 @@ function btnAddActionPerformed(evt) {//GEN-FIRST:event_btnAddActionPerformed
  */
 function btnDeleteActionPerformed(evt) {//GEN-FIRST:event_btnDeleteActionPerformed
     if (confirm("Delete owner?")) {
-        ownersQuery.deleteRow();
+        owners.deleteRow();
         model.save();
     }
 }//GEN-LAST:event_btnDeleteActionPerformed
@@ -39,6 +39,7 @@ function grdOwnersMouseClicked(evt) {//GEN-FIRST:event_grdOwnersMouseClicked
  * @param evt Event object
  */
 function btnSearchActionPerformed(evt) {//GEN-FIRST:event_btnSearchActionPerformed
+    petsUptates = [];
     lastNamePattern = '%' + txtSearch.text + '%';
 }//GEN-LAST:event_btnSearchActionPerformed
 
@@ -56,15 +57,31 @@ function txtSearchActionPerformed(evt) {//GEN-FIRST:event_txtSearchActionPerform
     btnSearchActionPerformed(null);
 }//GEN-LAST:event_txtSearchActionPerformed
 
+function petsOnRender(evt) {//GEN-FIRST:event_petsOnRender
+    var txt = "";
+    ownersPets.find(ownersPets.md.OWNERS_ID, evt.id).forEach(function(aPet) {
+        if(txt.length > 0)
+            txt += ' ';
+        txt += aPet.NAME ? aPet.NAME : '';
+    });
+    evt.cell.display = txt;
+    return true;
+}//GEN-LAST:event_petsOnRender
+
+function ownersPetsOnRequeried(evt) {//GEN-FIRST:event_ownersPetsOnRequeried
+    owners.params.lastNamePattern = ownersPets.params.lastNamePattern;
+    owners.requery();
+}//GEN-LAST:event_ownersPetsOnRequeried
+
 function editOwner() {
     var ownerView = new OwnerView();
-    ownerView.ownerID = ownersQuery.OWNERS_ID;
+    ownerView.ownerID = owners.OWNERS_ID;
     ownerView.showModal(refresh);
 }
 
 function refresh() {
-    var owner = ownersQuery.getRow(ownersQuery.rowIndex);
-    model.requery(function(){
+    var owner = owners.getRow(owners.rowIndex);
+    model.requery(function() {
         grdOwners.makeVisible(owner, true);
     });
 }
