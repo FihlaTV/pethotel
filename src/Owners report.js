@@ -2,6 +2,7 @@
  * 
  * @author vv
  * @name OwnersReport
+ * @public
  */
 
 /**

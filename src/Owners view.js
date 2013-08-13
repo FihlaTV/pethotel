@@ -47,8 +47,8 @@ function btnSearchActionPerformed(evt) {//GEN-FIRST:event_btnSearchActionPerform
  * @param evt Event object
  */
 function btnReportActionPerformed(evt) {//GEN-FIRST:event_btnReportActionPerformed
-    var ownersReport = new OwnersReport();
-    ownersReport.params.lastNamePattern = lastNamePattern;
+    var ownersReport = new Report("OwnersReport");
+    ownersReport.lastNamePattern = lastNamePattern;
     ownersReport.show();
 }//GEN-LAST:event_btnReportActionPerformed
 
