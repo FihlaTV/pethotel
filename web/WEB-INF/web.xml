@@ -2,7 +2,7 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
   <context-param>
     <param-name>ap</param-name>
-    <param-value>/home/vv/PlatypusProjects/PetHotel</param-value>
+    <param-value>C:/projects/pethotel</param-value>
   </context-param>
   <context-param>
     <param-name>url</param-name>
@@ -16,7 +16,7 @@
     <servlet-class>com.eas.server.httpservlet.PlatypusHttpServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
     <multipart-config>
-      <location>/home/vv/PlatypusProjects/PetHotel/web/pub</location>
+      <location>C:/projects/pethotel/web/pub</location>
       <max-file-size>2097152</max-file-size>
       <max-request-size>2165824</max-request-size>
       <file-size-threshold>1048576</file-size-threshold>
