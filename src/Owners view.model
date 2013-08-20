@@ -3,6 +3,7 @@
     <parameter description="" name="lastNamePattern" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="100" type="12" typeName="VARCHAR"/>
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150"/>
-  <entity Name="ownersQuery" Title="Owners Query" entityHeight="200" entityIconified="false" entityId="137568719089436" entityLocationX="270" entityLocationY="42" entityWidth="150" queryId="OwnersQuery" tableName="" tableSchemaName=""/>
-  <relation leftEntityId="-1" leftEntityParameterName="lastNamePattern" rightEntityId="137568719089436" rightEntityParameterName="lastNamePattern"/>
+  <entity Name="ownersPets" Title="OwnersPets query" entityHeight="200" entityIconified="false" entityId="137630993777331" entityLocationX="330" entityLocationY="38" entityWidth="150" onRequeried="ownersPetsOnRequeried" queryId="OwnersPets" tableName="" tableSchemaName=""/>
+  <entity Name="owners" Title="Owners Query" entityHeight="200" entityIconified="false" entityId="137568719089436" entityLocationX="559" entityLocationY="47" entityWidth="150" queryId="OwnersQuery" tableName="" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="lastNamePattern" rightEntityId="137630993777331" rightEntityParameterName="lastNamePattern"/>
 </datamodel>

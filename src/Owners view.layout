@@ -11,6 +11,7 @@
     </rowsColumnsDesignInfo>
     <treeDesignInfo/>
     <column name="fullName" title="Name" width="150">
+      <datamodelElement entityId="137568719089436" fieldName="fullName"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -22,10 +23,10 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <datamodelElement entityId="137568719089436" fieldName="fullName"/>
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="aDDRESS" title="Address" width="150">
+      <datamodelElement entityId="137568719089436" fieldName="ADDRESS"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -37,10 +38,10 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <datamodelElement entityId="137568719089436" fieldName="ADDRESS"/>
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="cITY" title="City" width="150">
+      <datamodelElement entityId="137568719089436" fieldName="CITY"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -52,10 +53,10 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <datamodelElement entityId="137568719089436" fieldName="CITY"/>
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <column name="tELEPHONE" title="Telephone" width="150">
+      <datamodelElement entityId="137568719089436" fieldName="TELEPHONE"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -67,7 +68,20 @@
       <headerStyle>
         <nativeFont name="DejaVu Sans"/>
       </headerStyle>
-      <datamodelElement entityId="137568719089436" fieldName="TELEPHONE"/>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+    </column>
+    <column cellFunction="petsOnRender" name="pets" title="Pets" width="100">
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="DejaVu Sans"/>
+      </headerStyle>
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
     <constraints bottom="-5px" left="0px" right="-4px" top="36px" type="MarginConstraintsDesignInfo"/>
