@@ -7,10 +7,8 @@
 function serverModule() {
     var self = this, model = P.loadModel(this.constructor.name);
     
-    // TODO : place constructor code here
-    
-    self.execute = function () {
+    self.execute = function (reportSuccessCallback) {
         var oReport = new OwnersReport();
-        oReport.execute();
+        oReport.execute(reportSuccessCallback);
     };
 }

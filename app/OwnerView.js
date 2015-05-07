@@ -110,7 +110,7 @@ function OwnerView() {
         for (var i in form.grdVisits.selected) {
             model.visitsQuery.splice(model.visitsQuery.indexOf(form.grdVisits.selected[i]), 1);
         }
-        //model.save();
+        model.save();
     };
 
 

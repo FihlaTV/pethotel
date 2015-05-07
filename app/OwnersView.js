@@ -53,12 +53,16 @@ function OwnersView() {
             for (var i in form.modelGrid.selected) {
                 model.owners.splice(model.owners.indexOf(form.modelGrid.selected[i]), 1);
             }
-            //model.save();
+            model.save();
         }
     };
 
+    var reportCallback = function (report) {
+        report.show();
+    };
+
     form.btnReport.onActionPerformed = function (event) {
-       var srvModule = new P.ServerModule("serverModule");
-       srvModule.execute();
+        var srvModule = new P.ServerModule("serverModule");
+        srvModule.execute(reportCallback);
     };
 }
