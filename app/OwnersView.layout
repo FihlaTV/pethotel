@@ -6,11 +6,11 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="img/list-add.png" name="btnAdd" parent="toolBar" prefHeight="36px" prefWidth="32px" toolTipText="New owner" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="img/list-remove.png" name="btnDelete" parent="toolBar" prefHeight="36px" prefWidth="32px" toolTipText="Delete owner" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="img/document-export.png" name="btnReport" parent="toolBar" prefHeight="36px" prefWidth="32px" toolTipText="Generate report" verticalTextPosition="3"/>
-  <ToolBar cursor="0" name="toolBar1" opaque="false" parent="view" prefHeight="36px" prefWidth="200px">
-    <AnchorsPaneConstraints height="36px" right="13px" top="10px" width="200px"/>
+  <ToolBar cursor="0" name="toolBar1" opaque="false" parent="view" prefHeight="36px" prefWidth="289px">
+    <AnchorsPaneConstraints height="36px" right="13px" top="10px" width="289px"/>
   </ToolBar>
   <Button cursor="0" icon="img/new-edit-find.png" name="btnSearch" parent="toolBar1" prefHeight="36px" prefWidth="32px" toolTipText="Search"/>
-  <TextField cursor="0" name="txtSearch" parent="toolBar1" prefHeight="36px" prefWidth="160px"/>
+  <TextField cursor="0" name="txtSearch" parent="toolBar1" prefHeight="36px" prefWidth="245px"/>
   <ModelGrid cursor="0" data="owners" deletable="false" editable="false" insertable="false" name="modelGrid" parent="view" prefHeight="220px" prefWidth="762px">
     <AnchorsPaneConstraints bottom="9px" left="10px" right="15px" top="50px"/>
     <ModelGridColumn field="fullName" name="colFullName" title="Full Name" width="150px">

@@ -65,4 +65,7 @@ function OwnersView() {
         var srvModule = new P.ServerModule("serverModule");
         srvModule.execute(reportCallback);
     };
+    form.txtSearch.onActionPerformed = function(event) {
+        form.btnSearch.onActionPerformed();
+    };
 }
