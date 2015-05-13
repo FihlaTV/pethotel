@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Owner, pets and visits" view="view">
   <AnchorsPane cursor="0" name="view" prefHeight="619px" prefWidth="789px"/>
-  <ModelFormattedField cursor="0" data="ownerQuery" field="cursor.telephone" format="(+#) ###-###-##-##" name="edPhone" parent="view" prefHeight="27px" prefWidth="648px">
+  <ModelFormattedField cursor="0" data="ownerQuery" field="phone" name="edPhone" parent="view" prefHeight="27px" prefWidth="648px">
     <AnchorsPaneConstraints height="27px" left="130px" right="11px" top="180px"/>
   </ModelFormattedField>
   <Label cursor="0" name="lblPhone" parent="view" prefHeight="24px" prefWidth="72px" text="Phone">
     <AnchorsPaneConstraints height="24px" left="24px" top="181px" width="72px"/>
   </Label>
-  <ModelFormattedField cursor="0" data="ownerQuery" field="cursor.city" format="" name="edCity" parent="view" prefHeight="27px" prefWidth="648px">
+  <ModelFormattedField cursor="0" data="ownerQuery" field="city" format="" name="edCity" parent="view" prefHeight="27px" prefWidth="648px">
     <AnchorsPaneConstraints height="27px" left="130px" right="11px" top="146px"/>
   </ModelFormattedField>
   <Label cursor="0" name="lblCity" parent="view" prefHeight="24px" prefWidth="72px" text="City">
@@ -15,10 +15,10 @@
   <Label cursor="0" name="lblAddress" parent="view" prefHeight="24px" prefWidth="72px" text="Address">
     <AnchorsPaneConstraints height="24px" left="20px" top="109px" width="72px"/>
   </Label>
-  <ModelFormattedField cursor="0" data="ownerQuery" field="cursor.address" format="" name="edAddress" parent="view" prefHeight="27px" prefWidth="648px">
+  <ModelFormattedField cursor="0" data="ownerQuery" field="address" format="" name="edAddress" parent="view" prefHeight="27px" prefWidth="648px">
     <AnchorsPaneConstraints height="27px" left="130px" right="11px" top="108px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="ownerQuery" field="cursor.lastname" format="" name="edLastName" parent="view" prefHeight="27px" prefWidth="648px">
+  <ModelFormattedField cursor="0" data="ownerQuery" field="lastname" format="" name="edLastName" parent="view" prefHeight="27px" prefWidth="648px">
     <AnchorsPaneConstraints height="27px" left="130px" right="11px" top="72px"/>
   </ModelFormattedField>
   <Label cursor="0" name="lblLastName" parent="view" prefHeight="24px" prefWidth="86px" text="Last Name">
@@ -27,7 +27,7 @@
   <Label cursor="0" name="lblFirstName" parent="view" prefHeight="24px" prefWidth="86px" text="First Name">
     <AnchorsPaneConstraints height="24px" left="20px" top="37px" width="86px"/>
   </Label>
-  <ModelFormattedField cursor="0" data="ownerQuery" field="cursor.firstname" format="" name="edFirstName" parent="view" prefHeight="27px" prefWidth="648px">
+  <ModelFormattedField cursor="0" data="ownerQuery" field="firstname" format="" name="edFirstName" parent="view" prefHeight="27px" prefWidth="648px">
     <AnchorsPaneConstraints height="27px" left="130px" right="11px" top="36px"/>
   </ModelFormattedField>
   <Button cursor="0" name="btnSave" parent="view" prefHeight="27px" prefWidth="84px" text="OK">
@@ -87,10 +87,10 @@
     <font family="Monospaced" size="14" style="0"/>
     <AnchorsPaneConstraints height="24px" left="12px" top="0px" width="132px"/>
   </Label>
-  <Label cursor="0" name="lblEmale" parent="view" prefHeight="24px" prefWidth="72px" text="E-male">
+  <Label cursor="0" name="lblEmale" parent="view" prefHeight="24px" prefWidth="72px" text="E-mail">
     <AnchorsPaneConstraints height="24px" left="20px" top="221px" width="72px"/>
   </Label>
-  <ModelFormattedField cursor="0" data="ownerQuery" field="cursor.email" format="" name="edEmale" parent="view" prefHeight="27px" prefWidth="648px">
+  <ModelFormattedField cursor="0" data="ownerQuery" field="email" format="" name="edEmale" parent="view" prefHeight="27px" prefWidth="648px">
     <AnchorsPaneConstraints height="27px" left="130px" right="11px" top="220px"/>
   </ModelFormattedField>
 </layout>

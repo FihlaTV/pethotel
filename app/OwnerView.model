@@ -3,7 +3,7 @@
   <entity Name="ownerQuery" Title="" entityHeight="200" entityIconified="false" entityId="142986378654527" entityLocationX="48" entityLocationY="72" entityWidth="150" queryId="OwnerQuery" tableName="" tableSchemaName=""/>
   <entity Name="visitsQuery" Title="" entityHeight="200" entityIconified="false" entityId="143068059872583" entityLocationX="427" entityLocationY="7" entityWidth="150" queryId="VisitsQuery" tableName="" tableSchemaName=""/>
   <entity Name="petTypesQuery" Title="" entityHeight="118" entityIconified="false" entityId="143031797550789" entityLocationX="429" entityLocationY="220" entityWidth="150" queryId="PetTypesQuery" tableName="" tableSchemaName=""/>
-  <referenceRelation collectionPropertyName="petTypesCollection" leftEntityFieldName="type_id" leftEntityId="143059779476010" polyline="390;148 406;148 406;261 423;261" rightEntityFieldName="pettypes_id" rightEntityId="143031797550789" scalarPropertyName="sPetType"/>
-  <referenceRelation collectionPropertyName="visitsCollection" leftEntityFieldName="pet_id" leftEntityId="143068059872583" rightEntityFieldName="pets_id" rightEntityId="143059779476010" scalarPropertyName="sVisit"/>
   <referenceRelation leftEntityFieldName="owner_id" leftEntityId="143059779476010" rightEntityFieldName="owners_id" rightEntityId="142986378654527"/>
+  <referenceRelation collectionPropertyName="visitsCollection" leftEntityFieldName="pet_id" leftEntityId="143068059872583" rightEntityFieldName="pets_id" rightEntityId="143059779476010" scalarPropertyName="sVisit"/>
+  <referenceRelation collectionPropertyName="petTypesCollection" leftEntityFieldName="type_id" leftEntityId="143059779476010" polyline="390;148 406;148 406;261 423;261" rightEntityFieldName="pettypes_id" rightEntityId="143031797550789" scalarPropertyName="sPetType"/>
 </datamodel>
