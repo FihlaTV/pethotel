@@ -58,9 +58,13 @@ function OwnersView() {
         }
     };
 
+    var reportCallback = function (report) {
+        report.show();
+    };
+
     form.btnReport.onActionPerformed = function (event) {
-       var srvModule = new P.ServerModule("serverModule");
-       srvModule.execute();
+        var srvModule = new P.ServerModule("serverModule");
+        srvModule.execute(reportCallback);
     };
     
     form.onWindowClosing = function(event) {
