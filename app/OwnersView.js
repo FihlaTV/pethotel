@@ -31,7 +31,7 @@ function OwnersView() {
     form.modelGrid.onMouseClicked = function (event) {
         if (event.clickCount > 1) {
             var ownerView = new OwnerView();
-            ownerView.showModal(refresh, model.owners.cursor.OWNERS_ID);
+              ownerView.showModal(refresh, model.owners.cursor);
         }
     };
 
@@ -41,7 +41,8 @@ function OwnersView() {
      */
     form.btnAdd.onActionPerformed = function (event) {
         var ownerView = new OwnerView();
-        ownerView.showModal(refresh);
+        model.owners.push({});
+        ownerView.showModal(refresh,model.owners.cursor);
     };
 
     /**
@@ -65,6 +66,22 @@ function OwnersView() {
         var srvModule = new P.ServerModule("serverModule");
         srvModule.execute(reportCallback);
     };
+    
+    form.onWindowClosing = function(event) {
+        if (model.modified){
+            if (confirm("Save changes")){
+                model.save();
+            }
+        }
+    };
+    form.btnSave.onActionPerformed = function(event) {
+        if (model.modified){
+            if (confirm("Save changes")){
+                model.save();
+            }
+        }
+    };
+
     form.txtSearch.onActionPerformed = function(event) {
         form.btnSearch.onActionPerformed();
     };

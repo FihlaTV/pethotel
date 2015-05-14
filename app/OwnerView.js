@@ -7,24 +7,27 @@ function OwnerView() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
-    var callback;
+    var onSucsess;
+    var owner;
     self.show = function () {
         form.show();
     };
 
-    self.showModal = function (aCallback, aID) {
-        callback = aCallback;
-        if (aID) {
-            model.ownerQuery.params.ownerID = aID;
-            model.petsQuery.params.owner_id = aID;
-            model.visitsQuery.params.ownerID = aID;
-            model.requery();
-        } else {
-            model.ownerQuery.push({});
-            var aID = model.ownerQuery.schema.owners_id;
-            model.petsQuery.params.owner_id = aID;
-            model.visitsQuery.params.ownerID = aID;
-        }
+    self.showModal = function (aOnSucsess, aOwner) {
+        P.Logger.info(aOwner);
+        owner = aOwner;
+        form.edFirstName.data = owner;
+        form.edLastName.data = owner;
+        form.edAddress.data = owner;
+        form.edCity.data = owner;
+        form.edPhone.data = owner;
+        form.edEmale.data = owner;
+        onSucsess = aOnSucsess;
+
+        model.petsQuery.params.owner_id = owner.OWNERS_ID;
+        model.visitsQuery.params.ownerID = owner.OWNERS_ID;
+        model.requery();
+
         form.showModal();
     };
 
@@ -33,8 +36,7 @@ function OwnerView() {
      * @return Validation error message or empty String if form is valid
      */
     function validate() {
-        var message = validateOwner();
-        message += validatePets();
+        var message = validatePets();
         message += validateVisits();
         return message;
     }
@@ -141,23 +143,29 @@ function OwnerView() {
         }
     };
     form.btnCancel.onActionPerformed = function (event) {
+        onSucsess();
         form.close();
     };
+    
+    
     form.btnSave.onActionPerformed = function (event) {
+        owner.fullName = owner.firstname + " " + owner.lastname;
+        var message = validateOwner();
+
         if (model.modified) {
-            var message = validate();
+            message += validate();
             if (!message) {
                 model.save(function () {
-                    callback();
+                    onSucsess(); 
                 }, function () {
                     P.Logger.Info("Failed on save");
                 });
-                form.close();
-            } else {
-                alert(message);
             }
-        } else {
+        }
+        if (!message) {
             form.close();
+        } else {
+            alert(message);
         }
 
     };
