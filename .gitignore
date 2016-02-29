@@ -6,3 +6,4 @@ META-INF
 appCache
 reports
 *lock.*
+*.war
