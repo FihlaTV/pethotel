@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<context>
-  <run appElement="OwnersView"/>
-  <dbSettings name="" password="sa" url="jdbc:h2:tcp://localhost:9092/~/pet_hotel_db" user="sa"/>
-</context>

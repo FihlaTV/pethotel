@@ -5,6 +5,6 @@
   <entity Name="petTypesQuery" Title="" entityHeight="118" entityIconified="false" entityId="143031797550789" entityLocationX="429" entityLocationY="220" entityWidth="150" queryId="PetTypesQuery" tableName="" tableSchemaName=""/>
   <referenceRelation leftEntityFieldName="owner_id" leftEntityId="143059779476010" rightEntityFieldName="owners_id" rightEntityId="142986378654527"/>
   <referenceRelation collectionPropertyName="visits" leftEntityFieldName="pet_id" leftEntityId="143068059872583" polyline="421;83 404;83 404;114 390;114" rightEntityFieldName="pets_id" rightEntityId="143059779476010" scalarPropertyName="pet"/>
-  <referenceRelation collectionPropertyName="pets" leftEntityFieldName="type_id" leftEntityId="143059779476010" polyline="390;148 406;148 406;261 423;261" rightEntityFieldName="pettypes_id" rightEntityId="143031797550789" scalarPropertyName="type"/>
   <referenceRelation leftEntityFieldName="owner_id" leftEntityId="143059779476010" rightEntityFieldName="owners_id" rightEntityId="142986378654527"/>
+  <referenceRelation collectionPropertyName="pets" leftEntityFieldName="type_id" leftEntityId="143059779476010" polyline="390;148 406;148 406;261 423;261" rightEntityFieldName="pettypes_id" rightEntityId="143031797550789" scalarPropertyName="type"/>
 </datamodel>

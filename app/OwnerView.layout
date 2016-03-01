@@ -50,7 +50,7 @@
       <ModelCombo displayField="name" displayList="petTypesQuery"/>
     </ModelGridColumn>
     <ModelGridColumn field="birthdate" name="birthdate" title="Birthdate" width="120px">
-      <ModelDate dateFormat="dd.MM.yyyy"/>
+      <ModelDate format="MMMM dd yyyy"/>
     </ModelGridColumn>
   </ModelGrid>
   <ToolBar cursor="0" name="toolBar" opaque="false" parent="panel" prefHeight="42px" prefWidth="397px">
@@ -62,10 +62,10 @@
   <ModelGrid cursor="0" data="petsQuery" field="cursor.visits" name="grdVisits" parent="panel1" prefHeight="270px" prefWidth="380px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="4px" top="41px"/>
     <ModelGridColumn field="fromdate" name="fromDate" title="From Date" width="92px">
-      <ModelDate/>
+      <ModelDate format="MMMM dd yyyy"/>
     </ModelGridColumn>
     <ModelGridColumn field="todate" name="toDate" title="To Date" width="92px">
-      <ModelDate/>
+      <ModelDate format="MMMM dd yyyy"/>
     </ModelGridColumn>
     <ModelGridColumn field="description" name="description" title="Description" width="92px">
       <ModelFormattedField format=""/>
@@ -80,11 +80,11 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="img/list-add.png" name="btnAddVisit" parent="toolBar1" prefHeight="42px" prefWidth="32px" toolTipText="New vist to hotel" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="img/list-remove.png" name="btnDeleteVisit" parent="toolBar1" prefHeight="42px" prefWidth="32px" toolTipText="Delete visit" verticalTextPosition="3"/>
   <Label cursor="0" name="label" parent="view" prefHeight="24px" prefWidth="132px" text="Pets &amp; visits:">
-    <font family="Monospaced" size="14" style="0"/>
+    <font family="Arial" size="14" style="0"/>
     <AnchorsPaneConstraints height="24px" left="12px" top="246px" width="132px"/>
   </Label>
   <Label cursor="0" name="label1" parent="view" prefHeight="24px" prefWidth="132px" text="Owner:">
-    <font family="Monospaced" size="14" style="0"/>
+    <font family="Arial" size="14" style="0"/>
     <AnchorsPaneConstraints height="24px" left="12px" top="0px" width="132px"/>
   </Label>
   <Label cursor="0" name="lblEmale" parent="view" prefHeight="24px" prefWidth="72px" text="E-mail">

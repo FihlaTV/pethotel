@@ -1,14 +1,23 @@
 /**
  * 
  * @author jskonst
- * @constructor
+ * @stateless
  * @public
- */ 
-function serverModule() {
-    var self = this, model = P.loadModel(this.constructor.name);
-    
-    self.execute = function (reportSuccessCallback) {
-        var oReport = new OwnersReport();
-        oReport.execute(reportSuccessCallback);
-    };
-}
+ */
+define('serverModule', ['orm','logger'], function (Orm,Logger, ModuleName) {
+    function module_constructor() {
+        var self = this, model = Orm.loadModel(ModuleName);
+
+        self.execute = function (reportSuccessCallback) {
+            Logger.severe("inExecute");
+            require('OwnersReport', function (OwnersReport) {
+                Logger.severe("inReport");
+                var oReport = new OwnersReport();
+                oReport.execute(reportSuccessCallback);
+            });
+
+        };
+    }
+    return module_constructor;
+});
+

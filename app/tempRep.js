@@ -1,7 +1,8 @@
 /**
  * 
+ * @author jskonst
  */
-define('OwnersReport', ['orm', 'template'], function (Orm, loadTemplate, ModuleName) {
+define('tempRep', ['orm', 'template'], function (Orm, loadTemplate, ModuleName) {
     function module_constructor() {
         var self = this
                 , model = Orm.loadModel(ModuleName)
@@ -10,8 +11,9 @@ define('OwnersReport', ['orm', 'template'], function (Orm, loadTemplate, ModuleN
         // TODO : place constructor code here
         
         self.execute = function (onSuccess, onFailure) {
-            model.ownersQuery.params.lastNamePattern = "%%";
+            
             model.requery(function () {
+                // TODO : place data processing code here
                 var report = template.generateReport();
                 // report.show(); | report.print(); | var savedTo = report.save(saveTo ?);
                 onSuccess(report);

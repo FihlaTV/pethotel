@@ -3,10 +3,11 @@
  * @author vv
  * @name OwnerView
  */
-function OwnerView() {
-    var self = this
-            , model = P.loadModel(this.constructor.name)
-            , form = P.loadForm(this.constructor.name, model);
+define('OwnerView', ['orm', 'forms', 'ui','logger'], function (Orm, Forms, Ui, Logger, ModuleName) {
+    function module_constructor() {
+        var self = this
+                , model = Orm.loadModel(ModuleName)
+                , form = Forms.loadForm(ModuleName, model);
     var onSucsess;
     var owner;
     self.show = function () {
@@ -14,7 +15,7 @@ function OwnerView() {
     };
 
     self.showModal = function (aOnSucsess, aOwner) {
-        P.Logger.info(aOwner);
+        Logger.info(aOwner);
         owner = aOwner;
         form.edFirstName.data = owner;
         form.edLastName.data = owner;
@@ -158,7 +159,7 @@ function OwnerView() {
                 model.save(function () {
                     onSucsess(); 
                 }, function () {
-                    P.Logger.Info("Failed on save");
+                    Logger.Info("Failed on save");
                 });
             }
         }
@@ -171,3 +172,5 @@ function OwnerView() {
     };
 
 }
+    return module_constructor;
+});
