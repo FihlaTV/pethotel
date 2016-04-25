@@ -2,7 +2,7 @@
  * 
  * @author user
  */
-define('OwnersView', ['orm', 'forms', 'ui','rpc','logger'], function (Orm, Forms, Ui,Rpc,Logger, ModuleName) {
+define('OwnersView', ['orm', 'forms', 'ui','rpc','logger','OwnerView'], function (Orm, Forms, Ui,Rpc,Logger,OwnerView, ModuleName) {
     function module_constructor() {
         var self = this
                 , model = Orm.loadModel(ModuleName)
