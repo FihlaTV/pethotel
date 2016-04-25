@@ -2,7 +2,7 @@
  * 
  * @author user
  */
-define('OwnersView', ['orm', 'forms', 'ui','rpc','logger','OwnerView'], function (Orm, Forms, Ui,Rpc,Logger,OwnerView, ModuleName) {
+define('OwnersView', ['orm', 'forms', 'rpc'], function (Orm, Forms, Rpc, ModuleName) {
     function module_constructor() {
         var self = this
                 , model = Orm.loadModel(ModuleName)
@@ -10,9 +10,8 @@ define('OwnersView', ['orm', 'forms', 'ui','rpc','logger','OwnerView'], function
 
         self.show = function () {
             form.show();
-            var searchText = "%%";
-            model.owners.params.lastNamePattern = searchText;
-            model.owners.requery();
+            model.owners.params.pattern = "%%";
+            model.requery(function () {});
         };
 
         /**
@@ -20,22 +19,15 @@ define('OwnersView', ['orm', 'forms', 'ui','rpc','logger','OwnerView'], function
          * @param event Event object
          */
         form.btnSearch.onActionPerformed = function (event) {
-            var searchText = "%" + form.txtSearch.text + "%";
-            model.owners.params.lastNamePattern = searchText;
-            model.owners.requery();
+            model.owners.params.pattern = "%" + form.txtSearch.text + "%";
+            model.owners.requery(function () {});
         };
-
-        var refresh = function () {
-            model.requery();
-        };
-
-
 
         form.modelGrid.onMouseClicked = function (event) {
             if (event.clickCount > 1) {
                 require('OwnerView', function (OwnerView) {
-                    var ownerView = new OwnerView();
-                    ownerView.showModal(refresh, model.owners.cursor);
+                    var ownerView = new OwnerView(model);
+                    ownerView.showModal();
                 });
             }
         };
@@ -45,12 +37,16 @@ define('OwnersView', ['orm', 'forms', 'ui','rpc','logger','OwnerView'], function
          * @param event Event object
          */
         form.btnAdd.onActionPerformed = function (event) {
-            model.owners.push({});
             require('OwnerView', function (OwnerView) {
-                var ownerView = new OwnerView();
-                ownerView.showModal(refresh, model.owners.cursor);
+                var owner = {};
+                model.owners.push(owner);
+                var ownerView = new OwnerView(model, function () {
+                    if (!ownerView.isEdited()) {
+                        model.owners.remove(owner);
+                    }
+                });
+                ownerView.showModal();
             });
-
         };
 
         /**
@@ -58,37 +54,27 @@ define('OwnersView', ['orm', 'forms', 'ui','rpc','logger','OwnerView'], function
          * @param event Event object
          */
         form.btnDelete.onActionPerformed = function (event) {
-            if (confirm("Delete owner?")) {
-                for (var i in form.modelGrid.selected) {
-                    model.owners.splice(model.owners.indexOf(form.modelGrid.selected[i]), 1);
-                }
-                model.save();
+            if (confirm("Delete  selected owners?")) {
+                model.owners.remove(form.modelGrid.selected);
+                model.save(function () {});
             }
-        };
-
-        var reportCallback = function (report) {
-            Logger.info("Hello");
-            report.show();
         };
 
         form.btnReport.onActionPerformed = function (event) {
-           
-            var srvReport =new Rpc.Proxy('serverModule');
-                srvReport.execute(reportCallback);
+            var reportProxy = new Rpc.Proxy('OwnersReport');
+            reportProxy.execute(function (report) {
+                report.show();
+            });
         };
 
         form.onWindowClosing = function (event) {
-            if (model.modified) {
-                if (confirm("Save changes")) {
-                    model.save();
-                }
+            if (model.modified && confirm("Save changes ?")) {
+                model.save(function () {});
             }
         };
         form.btnSave.onActionPerformed = function (event) {
-            if (model.modified) {
-                if (confirm("Save changes")) {
-                    model.save();
-                }
+            if (model.modified && confirm("Save changes ?")) {
+                model.save(function () {});
             }
         };
 

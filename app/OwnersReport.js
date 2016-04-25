@@ -1,5 +1,6 @@
 /**
- * 
+ * @stateless
+ * @public
  */
 define('OwnersReport', ['orm', 'template'], function (Orm, loadTemplate, ModuleName) {
     function module_constructor() {
@@ -7,10 +8,8 @@ define('OwnersReport', ['orm', 'template'], function (Orm, loadTemplate, ModuleN
                 , model = Orm.loadModel(ModuleName)
                 , template = loadTemplate(ModuleName, model);
         
-        // TODO : place constructor code here
-        
         self.execute = function (onSuccess, onFailure) {
-            model.ownersQuery.params.lastNamePattern = "%%";
+            model.ownersQuery.params.pattern = "%%";
             model.requery(function () {
                 var report = template.generateReport();
                 // report.show(); | report.print(); | var savedTo = report.save(saveTo ?);
