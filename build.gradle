@@ -196,6 +196,23 @@ check privateProps, 'platypusServer.debugPort', 5004
 check privateProps, 'servletContainer.logLevel', 'INFO'
 check privateProps, 'servletContainer.debugPort', 5007
 
+task h2FillPetHotelExec(type: JavaExec) {
+    classpath fileTree(sharedLibDir)
+    main 'org.h2.tools.RunScript'
+    args '-url', props['datasource.pet-hotel-data.dburl'], '-user', props['datasource.pet-hotel-data.dbuser'], '-password', props['datasource.pet-hotel-data.dbpassword'], '-script', "${projectDir}/src/pet-hotel-data.sql"
+}
+
+task initDatabase() {
+    doFirst {
+        if(new ProcessBuilder(h2FillPetHotelExec.commandLine)
+            .start()
+            .waitFor() != 0)
+            throw new InvalidUserDataException("Can't fill pet hotel database")
+        println 'Test database "pet-hotel" filled.'
+    }    
+}
+initDatabase.dependsOn h2
+
 def webAppUrl = privateProps['browser.customUrl'] ? privateProps['browser.customUrl'] : "http://localhost:${privateProps['http.port']}/${props['webApplication.context']}"
 def platypusAppUrl = privateProps['platypusClient.customUrl'] ? privateProps['platypusClient.customUrl'] : "platypus://localhost:${privateProps['platypus.port']}"
 
