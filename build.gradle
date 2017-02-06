@@ -202,16 +202,20 @@ task h2FillPetHotelExec(type: JavaExec) {
     args '-url', props['datasource.pet-hotel-data.dburl'], '-user', props['datasource.pet-hotel-data.dbuser'], '-password', props['datasource.pet-hotel-data.dbpassword'], '-script', "${projectDir}/src/pet-hotel-data.sql"
 }
 
-task initDatabase() {
+task initData() {
     doFirst {
-        if(new ProcessBuilder(h2FillPetHotelExec.commandLine)
-            .start()
-            .waitFor() != 0)
-            throw new InvalidUserDataException("Can't fill pet hotel database")
-        println 'Test database "pet-hotel" filled.'
+        if(!file("${System.properties['user.home']}/pet-hotel-data.mv.db").exists()){
+            if(new ProcessBuilder(h2FillPetHotelExec.commandLine)
+                .start()
+                .waitFor() != 0)
+                throw new InvalidUserDataException("Can't fill pet hotel database")
+            println 'Test database "pet-hotel" filled.'
+        } else {
+            println 'Test database "pet-hotel" exists already. Seems it has been filled earlier.'
+        }
     }    
 }
-initDatabase.dependsOn h2
+initData.dependsOn h2
 
 def webAppUrl = privateProps['browser.customUrl'] ? privateProps['browser.customUrl'] : "http://localhost:${privateProps['http.port']}/${props['webApplication.context']}"
 def platypusAppUrl = privateProps['platypusClient.customUrl'] ? privateProps['platypusClient.customUrl'] : "platypus://localhost:${privateProps['platypus.port']}"
@@ -325,7 +329,7 @@ tomcat.dependsOn buildTomcat,
                  distilleLib,
                  explodeWrappers,
                  explodePwc,
-                 h2
+                 initData
 
 def completeSeArgs = {
     def args = ['-url', "${file(webAppDirName).toURI().toURL()}"]
