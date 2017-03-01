@@ -1,5 +1,11 @@
 pethotel
 ========
+Sample PetHotel Platypus.js application 
 
-Sample PetHotel application on PlatypusPlatform
-Use database schema in folder db with username test and same password
+## Run
+In order to run the demo, execute the following commands:
+```
+git clone https://github.com/altsoft/pethotel.git
+cd pethotel
+gradlew runWebApp
+```
